@@ -20,6 +20,9 @@ Vue.use(Vuetify)
 import User from './Helpers/User'
 window.User = User
 
+//console.log(User.loggedIn())
+window.EventBus = new Vue();
+
 
 // const files = require.context('./', true, /\.vue$/i)
 //files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))

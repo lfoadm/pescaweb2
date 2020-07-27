@@ -18,8 +18,15 @@
                 <v-btn color="success" type="submit">
                     Entrar
                 </v-btn>
+
+                <router-link to="/signup">
+                    <v-btn depressed small color="primary">Inscrever-se</v-btn>
+                </router-link>
+
             </v-form>
         </v-container>
+
+        
 </template>
 
 <script>
@@ -30,6 +37,11 @@ export default {
                 email: null,
                 password: null
             }
+        }
+    },
+    created(){
+        if(User.loggedIn()){
+            this.$router.push({name:'home'})
         }
     },
     methods:{
